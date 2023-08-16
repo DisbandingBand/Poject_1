@@ -9,7 +9,7 @@ df_Search_Data_Delete = list(range(0,len(df_Search_Data)-1))
 for i in range(0, len(df_Search_Target)): #目标循环
     Data_Judge = [] #空列表
     print(df_Search_Data_Delete)
-    for j in range(0,len(df_Search_Data_Delete)-1): #数据循环
+    for j in range(0,len(df_Search_Data_Delete)): #数据循环
         print(j)
         print("------")
         print(len(df_Search_Data_Delete))
