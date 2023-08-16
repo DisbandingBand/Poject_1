@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 
-df_Search_Target = pd.read_excel(f"Target.xlsx",index_col=None) #引入数据目标
-df_Search_Data = pd.read_excel(f"Data.xlsx",index_col=None) #引入匹配数据
+df_Search_Target = pd.read_excel(f"C:\\Users\\cwn\\Desktop\\以甲基环己烷为熔沸基准\\N储氢量-30 100.xlsx",index_col=None) #引入数据目标
+df_Search_Data = pd.read_excel(f"C:\\Users\\cwn\\Desktop\\5-14CN-BDE.xlsx",index_col=None) #引入匹配数据
 
 dic = {} #空列表
 df_Search_Data_Delete = list(range(0,len(df_Search_Data)-1))
@@ -18,6 +18,7 @@ for i in range(0, len(df_Search_Target)): #目标循环
             print(Data_Judge)
             del df_Search_Data_Delete[j]
     min_value = min(Data_Judge,default=0) #对单目标列表计算极值
+    print(min_value)
     dic[df_Search_Target.iat[i,0]] = min_value #插入字典
 print(dic)
 
